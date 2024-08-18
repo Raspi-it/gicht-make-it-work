@@ -1,4 +1,27 @@
 .star-rating {
-    font-size: 2em;
-    color: #ffc107;
+    display: flex;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--accent-color);
+}
+
+.star.read-only {
+    cursor: default;
+}
+
+.star.full {
+    color: var(--accent-color);
+}
+
+.star.half {
+    background: linear-gradient(90deg, var(--accent-color) 50%, var(--accent-color) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.star.empty {
+    color: var(--accent-color);
 }

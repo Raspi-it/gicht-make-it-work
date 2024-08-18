@@ -1,4 +1,8 @@
 <div class="star-rating">
-    <i class="fa fa-star" *ngFor="let star of stars"></i>
-    <i class="fa fa-star-half" *ngIf="starRatingValue % 1 !== 0"></i>
+    <mat-icon *ngFor="let star of stars; let i = index" class="star" [ngClass]="{
+      'full': star === 1,
+      'half': star > 0 && star < 1,
+      'empty': star === 0
+    }" [class.read-only]="readOnly" (click)="!readOnly && setRating(i + 1)">
+        {{ star === 1 ? 'star' : (star > 0 && star < 1 ? 'star_half' : 'star_outline' ) }} </mat-icon>
 </div>

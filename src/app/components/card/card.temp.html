@@ -1,13 +1,19 @@
-<mat-card class="example-card" appearance="outlined">
-    <img mat-card-image src="{{ imageURL }}" alt="Photo of dish">
+<mat-card class="card" appearance="outlined">
+    <img mat-card-avatar src="{{ imageURL }}" alt="Photo of dish">
     <mat-card-actions>
-        <star-rating-temp [starRatingValue]="starRatingValue"></star-rating-temp>
-        <button mat-icon-button aria-label="Share icon button with a share icon">
-            <mat-icon>share</mat-icon>
-        </button>
-        <button mat-icon-button aria-label="Bookmark icon button with a bookmark icon">
-            <mat-icon class="material-icons-outlined">bookmark_add</mat-icon>
-        </button>
+        <div class="container">
+            <div class="col star-rating-container">
+                <star-rating-temp [rating]="rating" [readOnly]="readOnly"></star-rating-temp>
+            </div>
+            <div class="right-actions"> <!-- Container für die Icons -->
+                <button mat-icon-button aria-label="Share icon button with a share icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+                <button mat-icon-button aria-label="Bookmark icon button with a bookmark icon">
+                    <mat-icon class="material-icons-outlined">bookmark_add</mat-icon>
+                </button>
+            </div>
+        </div>
     </mat-card-actions>
     <mat-card-header>
         <mat-card-title>{{ cardTitle }}</mat-card-title>
@@ -17,5 +23,32 @@
         <p>
             Zutaten: {{ ingredients }}
         </p>
+        <div class="wrapper">
+            <div class="minutes">
+                <div class="sub-minutes">
+                    <mat-icon aria-hidden="false" aria-label="Schedule icon" fontIcon="schedule"></mat-icon>
+                </div>
+                <div class="sub-minutes">
+                    {{ minutes }} Minuten
+                </div>
+            </div>
+            <div class="difficulty">
+                <div class="sub-difficulty">
+                    <mat-icon class="material-icons-outlined" aria-hidden="false" aria-label="Circle icon"
+                        fontIcon="circle" [ngClass]="getDifficultyColorClass(difficulty)"></mat-icon>
+                </div>
+                <div class="sub-difficulty">
+                    {{ getDifficultyText(difficulty) }}
+                </div>
+            </div>
+            <div class="purinvalue">
+                <div class="sub-purinvalue">
+                    <mat-icon aria-hidden="false" aria-label="Equalizer icon" fontIcon="equalizer"></mat-icon>
+                </div>
+                <div class="sub-purinvalue">
+                    {{ purinvalue }} mg
+                </div>
+            </div>
+        </div>
     </mat-card-content>
 </mat-card>
