@@ -2,6 +2,9 @@ import { Input, ChangeDetectionStrategy, Component } from "@angular/core";
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+
+import { StarRatingTemp } from "../star-rating/star-rating.temp";
 
 
 @Component({
@@ -9,12 +12,13 @@ import { MatCardModule } from '@angular/material/card';
     templateUrl: 'card.temp.html',
     styleUrl: 'card.temp.scss',
     standalone: true,
-    imports: [MatCardModule, MatButtonModule],
+    imports: [MatCardModule, MatButtonModule, MatIconModule, StarRatingTemp],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardTemp {
-    @Input() cardTitle = " ";
-    @Input() cardSubtitle = " ";
-    @Input() imageURL = "";
-    @Input() ingredients = "";
+    @Input() cardTitle!: string;
+    @Input() cardSubtitle!: string;
+    @Input() imageURL!: string;
+    @Input() ingredients!: string;
+    @Input() starRatingValue!: number;
 }

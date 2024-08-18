@@ -1,5 +1,22 @@
 .example-card {
     max-width: 400px;
+    border-width: 0;
+    box-shadow: rgba(84, 86, 88, 0.2) 0px 10px 25px;
+
+    mat-card-header {
+        padding: 0px 16px 0px;
+        justify-content: center;
+    }
+
+    mat-card-content {
+        padding: 10px 16px 16px 25px;
+        text-align: center;
+        color: darkgrey;
+    }
+
+    mat-icon {
+        color: darkgrey;
+    }
 }
 
 .example-header-image {
