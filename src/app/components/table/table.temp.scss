@@ -1,0 +1,166 @@
+.table-temp {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2 {
+    color: #121212;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 150%;
+    margin-bottom: 2rem;
+}
+
+.table-content {
+    width: 100%;
+    display: table;
+}
+
+table {
+    font-size: .875rem;
+    line-height: 20px;
+    font-weight: 400;
+    border-collapse: collapse;
+    border-radius: 12px;
+    box-shadow: rgba(84, 86, 88, 0.2) 1px 3px 5px;
+    width: 100%;
+    text-indent: 0;
+    border-color: inherit;
+    box-sizing: border-box;
+    border: 0 solid;
+    color: #121212;
+
+    thead {
+        tr {
+            border-bottom-width: 1px;
+            border-color: #ebf0f5;
+
+        }
+
+        th {
+            color: #4b5565;
+            font-weight: 500;
+            font-size: .875rem;
+            line-height: 20px;
+            vertical-align: middle;
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            height: 3rem;
+            box-sizing: border-box;
+            border: 0 solid;
+        }
+    }
+
+    tbody {
+        box-sizing: border-box;
+        border: 0 solid;
+
+        tr {
+            border-color: #ebf0f5;
+            border-bottom-width: 1px;
+            box-sizing: border-box;
+            border: 0 solid;
+
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f0f0f0;
+                /* Helle Hintergrundfarbe bei Hover */
+                transform: translateY(2px);
+                /* Verschieben der Zeile nach unten */
+                box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.2);
+                /* Innerer Schatten, um den Eindruck eines "Eindruckens" zu erzeugen */
+            }
+
+            &:last-child {
+                border-radius: 0 0 12px 12px;
+
+                // Stile auch bei Hover erhalten
+                &:hover {
+                    border-radius: 0 0 12px 12px;
+                }
+            }
+
+            td {
+                color: #364152;
+                font-size: .75rem;
+                line-height: 16px;
+                font-weight: 400;
+                vertical-align: middle;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                white-space: nowrap;
+                box-sizing: border-box;
+                border: 0 solid;
+
+                .tag {
+                    display: inline-block;
+                    padding: 0.4em 0.8em;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    border-radius: 5px;
+                    box-shadow: rgba(84, 86, 88, 0.2) 1px 2px 8px;
+                    color: white;
+                    transition: background-color 0.3s, transform 0.2s;
+                }
+
+                tbody tr:hover .tag {
+                    background-color: darken(#f0f0f0, 5%);
+                    /* Farblich angepasster Tag-Hintergrund bei Hover */
+                }
+
+                .tag-gemüse {
+                    background-color: #e8ffed;
+                    color: #00A110;
+                    /* Hellgrün für Gemüse */
+                }
+
+                .tag-obst {
+                    background-color: #f7c6c7;
+                    color: #d16c6e;
+                    /* Rosa für Obst */
+                }
+
+                .tag-grundlage {
+                    background-color: #ffe699;
+                    /* Hellgelb für Grundlage */
+                    color: #6e5f31;
+                    /* Dunkler Text für Kontrast */
+                }
+
+                .tag-nüsse {
+                    background-color: #c9af88;
+                    /* Beige für Nüsse */
+                    color: #745e4a;
+                    /* Dunkler Text für Kontrast */
+                }
+
+                .row-container {
+                    box-sizing: border-box;
+                    border: 0 solid;
+                    width: 100%;
+                    position: relative;
+
+                    a {
+                        font-weight: 500;
+                        font-size: .875rem;
+                        line-height: 20px;
+                        gap: .75rem;
+                        align-items: center;
+                        display: flex;
+                        color: inherit;
+                        text-decoration: inherit;
+                        box-sizing: border-box;
+                        border: 0 solid;
+                    }
+                }
+            }
+        }
+    }
+}

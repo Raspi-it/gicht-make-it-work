@@ -1,12 +1,14 @@
 .card {
     max-width: 400px;
+    min-width: 400px;
+    height: 500px;
     border-width: 0;
     box-shadow: rgba(84, 86, 88, 0.2) 0px 10px 25px;
 
     img {
         margin: 20px 30px 20px 30px;
-        height: 200px;
-        width: 200px;
+        min-width: 150px;
+        min-height: 150px;
         align-content: center;
         align-self: center;
         box-shadow: rgba(84, 86, 88, 0.2) 5px 8px 10px;

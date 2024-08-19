@@ -1,0 +1,35 @@
+<div class="table-temp">
+    <h2>{{ tableTitle }}</h2>
+    <div class="table-content">
+        <table>
+            <thead>
+                <tr>
+                    <th *ngFor="let header of tableColoumns">
+                        {{ header }}
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let row of tableData">
+                    <td *ngFor="let header of tableColoumns">
+                        <div class="row-container">
+                            <ng-container *ngIf="header === 'Kategorie'; else normalCell">
+                                <span [ngClass]="{
+                                            'tag-gemüse': row[header] === 'Gemüse',
+                                            'tag-obst': row[header] === 'Obst',
+                                            'tag-grundlage': row[header] === 'Grundlage',
+                                            'tag-nüsse': row[header] === 'Nüsse'
+                                          }" class="tag">
+                                    {{ row[header] }}
+                                </span>
+                            </ng-container>
+                            <ng-template #normalCell>
+                                <a>{{ row[header] }}</a>
+                            </ng-template>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

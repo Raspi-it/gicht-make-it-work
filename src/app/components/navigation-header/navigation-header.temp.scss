@@ -1,6 +1,12 @@
+a {
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+}
+
 .site-header {
     color: rgb(65, 65, 65);
     padding: 10px 20px;
+    margin-bottom: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -53,7 +59,6 @@
                     .dropdown-menu {
                         display: none;
                         position: absolute;
-                        background-color: #444;
                         list-style: none;
                         padding: 0;
                         margin: 0;

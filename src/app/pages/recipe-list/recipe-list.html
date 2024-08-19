@@ -1,0 +1,10 @@
+<h2>Rezepte</h2>
+
+<div class="row">
+    <div class="coloumn" *ngFor="let item of listData">
+        <card-temp cardTitle="{{ item.title}}" cardSubtitle="{{ item.subtitle }}" imageURL="{{ item.imgURL }}"
+            ingredients="{{ item.ingredients }}" [rating]="item.rating" [minutes]="item.minutes"
+            [difficulty]="item.difficulty" [purinvalue]="item.purinvalue" [readOnly]="item.readOnly">
+        </card-temp>
+    </div>
+</div>
