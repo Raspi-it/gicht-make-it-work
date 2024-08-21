@@ -12,24 +12,15 @@ body {
     font-family: Poppins, "Helvetica Neue", sans-serif;
 }
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Poppins, "Helvetica Neue", sans-serif;
-}
-
 // Variablen
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2ecc71;
-    --accent-color: rgb(85, 176, 70);
+    --background-color: #EDF1D6;
+    --primary-color: #9DC08B;
+    --secondary-color: #609966;
+    --accent-color: #40513B;
     --warning-color: rgb(194, 172, 123);
     --alarm-color: rgb(194, 123, 123);
-    --gray-color: #bdc3c7;
+    --gray-color: #656565;
 }
 
 /* Importing Bootstrap SCSS file. */

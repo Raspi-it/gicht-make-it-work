@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 
-import { MatGridListModule } from '@angular/material/grid-list';
 import { CardTemp } from "../../components/card/card.temp";
 import { NgFor } from "@angular/common";
 
@@ -9,7 +8,7 @@ import { NgFor } from "@angular/common";
     templateUrl: 'recipe-list.html',
     styleUrl: 'recipe-list.scss',
     standalone: true,
-    imports: [MatGridListModule, CardTemp, NgFor],
+    imports: [CardTemp, NgFor],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RecipeListPage {

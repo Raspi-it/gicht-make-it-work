@@ -1,0 +1,31 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    /* Setzt die Höhe des Host-Elements auf die volle Höhe des Viewports */
+    text-align: center;
+    /* Zentriert den Textinhalt innerhalb des Containers */
+}
+
+h2 {
+    color: var(--accent-color);
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.error {
+    margin-top: 3rem;
+
+    p {
+        font-size: 6rem;
+    }
+}
+
+.message {
+    margin-top: 3rem;
+
+    p {
+        font-size: 2rem;
+    }
+}
